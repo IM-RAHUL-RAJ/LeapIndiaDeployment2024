@@ -1,0 +1,383 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+}
+ 
+mat-toolbar,
+::ng-deep .dropdown-menu,
+mat-drawer {
+    align-items: center;
+    justify-content: center;
+    padding: 5px 20px;
+    color: white;
+    background-color: #046223;
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    position: relative;
+}
+ 
+mat-toolbar {
+    height: 12%;
+    border-bottom: 10px solid #02310d;
+}
+ 
+mat-toolbar img {
+    max-width: 60px;
+    max-height: 50px;
+    margin-top: -5px;
+}
+ 
+.spacer-left {
+    flex: 1 1.2 auto;
+}
+ 
+.nav-title {
+    margin-left: 20%;
+    font-weight: 600;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    cursor: pointer;
+}
+ 
+.spacer-right {
+    flex: 1 1 auto;
+}
+ 
+mat-toolbar button.nav-button {
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0 2%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+ 
+mat-toolbar button.nav-button a {
+    text-decoration: none;
+    color: white;
+}
+ 
+mat-toolbar button.nav-button a:hover {
+    color: #369;
+}
+ 
+mat-toolbar button.nav-button mat-icon {
+    font-weight: bold;
+    font-size: 25px;
+    display: inline-block;
+}
+ 
+mat-toolbar button.nav-button:hover,
+mat-toolbar button.other-button:hover,
+::ng-deep button.dropdown-menu-button:hover,
+mat-drawer button:hover {
+    opacity: 50%;
+    background-color: white;
+    color: #369;
+}
+ 
+::ng-deep .dropdown-menu {
+    position: relative;
+    /* left: 10%; */
+}
+ 
+::ng-deep .dropdown-menu-button mat-label {
+    color: white;
+    max-height: fit-content;
+}
+ 
+ 
+.footer {
+    height: 45px;
+    display: flex;
+    margin: 0;
+    padding: 5px 0 10px 0;
+    color: white;
+    background-color: #046223;
+    border-top: 12px solid #02310d;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.footer a {
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+ 
+    .mat-icon {
+        padding-left: 4px;
+        font-size: 20px;
+        height: 20px;
+        color: white;
+    }
+}
+ 
+.footer a:hover {
+    opacity: 50%;
+}
+ 
+.content {
+    flex: 1 1 auto;
+    width: 100%;
+    margin: auto -30px 0 0;
+    display: flex;
+    flex-direction: column;
+}
+ 
+.sidenav-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+ 
+.sidenav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: none;
+    background: #046223;
+    color: white;
+    text-align: center;
+    position: fixed;
+}
+ 
+.menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    text-align: center;
+ 
+    .mat-icon {
+        font-size: 30px;
+        height: 30px;
+        width: 30px;
+        color: white;
+    }
+}
+ 
+.sidenav-container mat-sidenav .active {
+    background-color: #046223;
+    font-weight: bold;
+}
+ 
+.sidenav-container mat-sidenav mat-list-item a {
+    text-decoration: none;
+}
+ 
+.sidenav-container mat-sidenav mat-list-item a:hover {
+    opacity: 75%;
+}
+ 
+.sidenav mat-nav-list mat-list-item {
+    height: 60px;
+    position: relative;
+}
+
+.sidenav p {
+    color: white;
+    font-size: 24px;
+}
+ 
+mat-sidenav mat-divider {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    background-color: white;
+}
+ 
+mat-sidenav-content {
+    display: flex;
+    transition: margin-left 0.3s ease;
+    flex: 1;
+    /* overflow: auto; */
+}
+ 
+.body-content {
+    display: flex;
+    border-radius: 10px;
+    margin: 10px;
+    flex: 1;
+}
+
+.home-content, .robo-advisor-section, .explore-section {
+    padding:5px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+ 
+.home-content {
+    padding:20px;
+}
+.home-content h1 {
+    color: #02310d;
+    font-size: 40px;
+    margin: 1%;
+}
+ 
+.home-content h2 {
+    margin: 1%;
+    margin-left: 2%;
+    font-size: 25px;
+}
+
+.robo-advisior-section{
+    height: 400px;
+    margin-bottom: 2rem;
+}
+
+
+.client-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-content-card {
+    flex: 1;
+    margin: 20px 5px;
+    height: fit-content;
+    max-height: 175px;
+}
+
+.client-content-card p {
+    margin: 4px;
+}
+
+.robo-advisior-section{
+    position: fixed;
+
+}
+/* _---------------------------------------------new section ----------------------------------- */
+/* app.component.css */
+
+/* app.component.css */
+
+/* app.component.css */
+
+/* Button Styles */
+.chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    /* background: linear-gradient(135deg, #007bff, #00d2ff); */
+    background: linear-gradient(135deg, #02310d, #046223);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden; /* Ensure content does not overflow */
+    z-index: 9999; /* Ensure button is on top of other elements */
+  }
+  
+  .button-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .chatbot-button img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .button-text {
+    display: none;
+    color: #fff;
+    font-size: 14px;
+    margin-left: 8px;
+  }
+  
+  /* Hover Effect */
+  .chatbot-button:hover {
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    /* background: linear-gradient(135deg, #0056b3, #00aaff); */
+    background: linear-gradient(135deg, #02310d, #046223);
+    transform: scale(1.1);
+  }
+  
+  .chatbot-button:hover .button-text {
+    display: inline;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+  
+  .modal.modal-open {
+    display: flex;
+    opacity: 1;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .close:hover {
+    color: #007bff;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  
+  

@@ -1,0 +1,294 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+mat-toolbar {
+    align-items: center;
+    justify-content: center;
+    padding: 5px 20px;
+    color: white;
+    background-color: #046223;
+    border-bottom: 10px solid #02310d;
+    height: 12%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    position: relative;
+}
+
+mat-toolbar img {
+    max-width: 60px;
+    max-height: 50px;
+    margin-top: -5px;
+}
+
+.spacer-left {
+    flex: 1 1.2 auto;
+}
+
+.nav-title {
+    margin-left: 20%;
+    font-weight: 600;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+.spacer-right {
+    flex: 1 1.5 auto;
+}
+
+mat-toolbar button.nav-button {
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 3%;
+    margin-right: 2%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+mat-toolbar button.nav-button:hover {
+    opacity: 50%;
+    background-color: white;
+    color: #369;
+}
+
+mat-toolbar button.nav-button a {
+    text-decoration: none;
+    color: white;
+}
+
+mat-toolbar button.nav-button a:hover {
+    color: #369;
+}
+
+.footer {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    margin: 0;
+    padding: 5px 0 10px 0;
+    color: white;
+    background-color: #046223;
+    border-top: 12px solid #02310d;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer a {
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+
+    .mat-icon {
+        padding-left: 4px;
+        font-size: 20px;
+        height: 20px;
+        color: white;
+    }
+}
+
+.footer a:hover {
+    opacity: 50%;
+}
+
+.body-content {
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-gap: 50px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.image-section {
+    grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    filter: sepia(100%) saturate(110%) hue-rotate(90deg)
+}
+
+.auth-section {
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-section h2 {
+    font-size: 60px;
+    width: 50%;
+    text-align: center;
+}
+
+.auth-section button {
+    width: 40%;
+    height: 50px;
+    margin: 2% 0;
+    padding: 10px;
+    background-color: #046223;
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    ;
+    border: 2px solid black;
+}
+
+.features-section {
+    margin: 2%;
+    grid-column: 1/3;
+    display: flex; flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.features-section h2 {
+    color: #02310d;
+    font-size: 40px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr); 
+    grid-gap: 90px;
+    width: 75%;
+}
+
+mat-card.feature-card {
+    height: 150px; 
+    padding: 5px;
+    display: flex; align-items: center; justify-content: center;
+    background-color:#046223;
+    border-radius: 4px;
+    color:white;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2), 6px 12px 24px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+mat-card.feature-card mat-icon {
+    color:white;
+    font-size:32px; font-weight: bold;
+    height:35%; width: 35%;
+    margin-top:1%;
+    position: absolute; top:1%; left:32%;
+}
+
+mat-card.feature-card mat-card-title {
+    font-size:28px; 
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+mat-card.feature-card mat-card-subtitle {
+    font-size:20px; 
+    width: 100%;
+    text-align: center;
+    color:white;
+}
+
+mat-card-header.login-form-header {
+    display: flex; justify-content: center;
+    align-items: center;
+    background-color: rgb(55, 97, 67);
+    color:white;
+    position: relative;
+    padding:20px;
+    margin:0;
+}
+
+mat-card-title.login-form-title {
+   font-weight: bold;
+   font-size:30px;
+   flex-grow: 1;
+   text-align: center;
+}
+
+mat-card-header.login-form-header mat-icon {
+    position:absolute;
+    top:35%; right:5%;
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+mat-card-header.login-form-header mat-icon:hover {
+    opacity: 50%;
+}
+
+.login-form {
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    margin-bottom: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.login-form .form-section {
+    width: 100%;
+    padding: 5px;
+    border: 2px solid  rgb(55, 97, 67);
+    margin: 20px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; align-items: center;
+}
+
+.login-form .form-section > * {
+    max-width: 90%;
+}
+
+.login-form .form-section h2 {
+    margin: 10px 20px;
+    display: inline-block;
+    color:  rgb(55, 97, 67);
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.login-form .form-section mat-form-field {
+    margin: 5px 5px;
+    width: 70%;
+}
+
+::ng-deep .mdc-text-field:not(.mdc-text-field-disabled) .mdc-floating-label {
+    color: rgb(55, 97, 67) !important;
+}
+::ng-deep .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: rgb(55, 97, 67) !important;
+}
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
+    border-bottom-color: rgb(55, 97, 67) !important;
+}
+::ng-deep .mdc-text-field--filled .mdc-line-ripple::after {
+    border-bottom-color: rgb(55, 97, 67) !important;
+}
+
+.login-form button {
+    padding: 2px;
+    margin: 5px 20px;
+    font-size: 25px;
+    background-color: rgb(55, 97, 67);
+    color: white;
+    font-weight: bold;
+    width: 150px;
+    height: fit-content;
+    border-radius: 4px;
+}

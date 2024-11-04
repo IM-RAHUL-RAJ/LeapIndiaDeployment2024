@@ -1,0 +1,110 @@
+h1 {
+    color: #02310d;
+    text-align: center;
+    font-size: 25px;
+    margin-top:-1%;
+}
+
+/*Mat Tab Styles*/
+::ng-deep .mat-mdc-tab .mdc-tab__text-label,
+::ng-deep .mat-mdc-tab-link .mdc-tab__text-label {
+    color: rgb(55, 97, 67) !important;
+}
+
+::ng-deep .mat-mdc-tab-header-paginator-chevron {
+    border-color: var(--mdc-theme-on-surface, rgb(55, 97, 67)) !important;
+}
+
+::ng-deep .mdc-tab {
+    font-family: var(--mdc-typography-button-font-family, var(--mdc-typography-button-font-family, Cambria));
+    font-size: var(--mdc-typography-button-font-size, 20px) !important;
+    font-weight: var(--mdc-typography-button-font-weight, 600) !important;
+}
+
+::ng-deep .mat-mdc-tab:not(.mat-mdc-tab-disabled) .mdc-tab-indicator__content--underline,
+::ng-deep .mat-mdc-tab-link:not(.mat-mdc-tab-disabled) .mdc-tab-indicator__content--underline {
+    border-color:  var(--mdc-tab-indicator-active-indicator-color, rgb(55, 97, 67)) !important;
+}
+
+div.mat-tab-content {
+    margin:1%;
+    padding:20px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+.form {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 25%;
+}
+
+.horizontal-fields {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+mat-form-field {
+    margin-bottom: 2%;
+    margin-right: 3%;
+    width: 100%;
+}
+
+::ng-deep .mdc-text-field:not(.mdc-text-field-disabled) .mdc-floating-label, ::ng-deep .mdc-text-field:not(.mdc-text-field-disabled) .mat-select-arrow {
+    color: rgb(55, 97, 67) !important;
+}
+
+::ng-deep .mdc-text-fieldd--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: rgb(55, 97, 67) !important;
+}
+
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
+    border-color: rgb(55, 97, 67) !important;
+}
+
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline__leading,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline__notch,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline__trailing {
+    border-color: rgb(55, 97, 67) !important;
+}
+
+button {
+    margin-right: 2%;
+    width: 10rem;
+}
+
+.download-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-button button {
+    background-color: rgb(55, 97, 67);
+    color: white;
+    font-size: 18px;
+    width: 120px; height: 45px;
+    padding: 5px; 
+}
+
+.export-button{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+}
+
+.export-button button{
+    background-color: rgb(55, 97, 67);
+    color: white;
+}

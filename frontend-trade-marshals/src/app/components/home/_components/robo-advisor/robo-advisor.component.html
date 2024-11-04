@@ -1,0 +1,46 @@
+<!-- <div  class="grid-container ag-theme-alpine">
+    <ag-grid-angular 
+        style="height: 100%; width:50%;"
+        [rowData]="prices"
+        [columnDefs]="buyColumnDefs"
+        [defaultColDef]="defaultColDef"
+        [sideBar] = "sidebar"
+        />
+</div>
+      
+<div  class="grid-container ag-theme-alpine">
+    <ag-grid-angular 
+        style="height: 100%; width:50%;"
+        [rowData]="prices"
+        [columnDefs]="sellColumnDefs"
+        [defaultColDef]="defaultColDef"
+        [sideBar] = "sidebar"
+        />
+</div> -->
+
+<mat-dialog-content class="mat-typography">
+  
+  <h2> Robo Advisor </h2>
+
+  <div class="grid-container">
+    <div class="ag-theme-alpine grid-item">
+      <ag-grid-angular 
+        style="height: 100%; width:96%;"
+        [rowData]="buyPrices"
+        [columnDefs]="buyColumnDefs"
+        [defaultColDef]="defaultColDef"
+        [sideBar]="sidebar">
+      </ag-grid-angular>
+    </div>
+    
+    <div class="ag-theme-alpine grid-item">
+      <ag-grid-angular 
+      style="height: 100%; width:96%;"
+        [rowData]="sellPrices"
+        [columnDefs]="sellColumnDefs"
+        [defaultColDef]="defaultColDef"
+        [sideBar]="sidebar">
+      </ag-grid-angular>
+    </div>
+  </div>
+</mat-dialog-content>

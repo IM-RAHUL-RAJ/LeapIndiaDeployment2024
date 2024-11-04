@@ -1,0 +1,41 @@
+# Properties documentation: https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html
+
+spring.profiles.active = prod
+# Ways to set the active profile:
+# 1. Maven:  mvn -Pdev clean spring-boot:run
+# 2. System property:  java -Dspring.profiles.active=dev -jar myApp.jar 
+# 3. Environment variable: export SPRING_PROFILES_ACTIVE=dev
+
+# Uncomment the following if you want to use H2 as the default database
+# spring.sql.init.mode=embedded
+spring.sql.init.continue-on-error=true
+
+server.port = 8080
+
+mybatis.type-aliases-package = com.training.presidents.models
+mybatis.mapper-locations = classpath*:com/marshals/**/*.xml
+
+# database properties are set in the environment-specific 
+# files application-dev.properties and application-prod.properties.
+# One of those files will be loaded, depending on which profile is active.
+
+# Logging config.
+# See https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-logging
+
+# For production, set logging levels in application-dev.properties and application-prod.properties 
+logging.level.root=warn
+
+# Log tomcat info messages so we can see the port number
+logging.level.org.springframework.boot.web.embedded.tomcat=info
+
+# Log debug messages for our types, including the MyBatis mapper interface
+logging.level.com.marshals=debug
+
+# Configure the log output to the console and a file
+logging.pattern.console=%-5p %C{0}.%M: %m%n
+
+logging.file.name=target/logs/application.log
+logging.pattern.file=%d{HH:mm:ss.SSS} %-5p %C{40}.%M: %m%n
+logging.logback.rollingpolicy.max-file-size=50MB
+logging.logback.rollingpolicy.total-size-cap=300MB
+logging.register-shutdown-hook=true

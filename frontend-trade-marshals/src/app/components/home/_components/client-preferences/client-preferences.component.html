@@ -1,0 +1,73 @@
+<h2>CLIENT PREFERENCES</h2>
+<div class="form">
+    <form [formGroup]="preferences" (ngSubmit)="savePreferences()">
+
+        <div class="horizontal-fields">
+            <mat-form-field appearance="fill">
+                <mat-label>Investment Purpose</mat-label>
+                <mat-select formControlName="investmentPurpose">
+                    <mat-option *ngFor="let purpose of purposes" [value]="purpose.value">
+                        {{purpose.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Income Category</mat-label>
+                <mat-select formControlName="incomeCategory">
+                    <mat-option *ngFor="let income of incomes" [value]="income.value">
+                        {{income.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <br>
+
+        <div class="horizontal-fields">
+            <mat-form-field appearance="fill">
+                <mat-label>Length of Investment</mat-label>
+                <mat-select formControlName="lengthOfInvestment">
+                    <mat-option *ngFor="let length of lengths" [value]="length.value">
+                        {{length.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Percentage of Spend</mat-label>
+                <mat-select formControlName="percentageOfSpend">
+                    <mat-option *ngFor="let percentage of percentages" [value]="percentage.value">
+                        {{percentage.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <mat-label>Risk Tolerance:</mat-label>
+        <div class="slider">
+            <h4>Low</h4>
+            <mat-slider min="1" max="5" step="1" showTickMarks discrete color="slider-green">
+                <input matSliderThumb formControlName="riskTolerance">
+            </mat-slider>
+            <h4>High</h4>
+        </div>
+
+        <br>
+
+        <input type="checkbox" formControlName="acceptAdvisor" class="acceptAdvisor">
+        <mat-label for="acceptAdvisor">
+            I have read the <a href="/home">Terms & Conditions</a> and would like to get
+            recommendations from Robot Advisor
+        </mat-label>
+
+        <br>
+        <br>
+
+        <div class="center-buttons">
+            <button class="submitButton" type="button" mat-raised-button (click)="savePreferences()" [disabled]="!preferences.valid">
+                Save
+            </button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,59 @@
+<div mat-dialog-title class="tf-dialog-title">
+    <h1>Trade Form</h1>
+    <div class="">
+        <h2>{{ this.instrument.instrumentDescription }}</h2>
+        <p>External ID: {{ this.instrument.externalId }}</p>
+        <p *ngIf="this.direction === 'B'"><b>Bid Price: {{ this.bidPrice }}</b></p>
+        <p *ngIf="this.direction === 'S'"><b>Sell Price: {{ this.askPrice }}</b></p>
+    </div>
+</div>
+<div mat-dialog-content class="tf-dialog-content">
+    <div class="row">
+        <mat-form-field>
+            <mat-label>Instrument ID</mat-label>
+            <input matInput [(ngModel)]="order.instrumentId" disabled />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Direction</mat-label>
+            <mat-select [(ngModel)]="order.direction" disabled>
+                <mat-option value="B">Buy</mat-option>
+                <mat-option value="S">Sell</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field>
+            <mat-label>Quantity</mat-label>
+            <input matInput [(ngModel)]="order.quantity" required type="number" #quantity="ngModel"
+                min={{this.instrument.minQuantity}} max={{this.instrument.maxQuantity}} />
+            <span
+                *ngIf="quantity.value && quantity.value > this.instrument.maxQuantity || quantity.value < this.instrument.minQuantity"
+                class="error-text">Quantity should be within [{{ this.instrument.minQuantity }} - {{
+                this.instrument.maxQuantity }}]
+            </span>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Target Price</mat-label>
+            <input matInput [(ngModel)]="order.targetPrice" 
+            required
+            #targetPrice="ngModel" 
+            type="number"
+            />
+            <span *ngIf="targetPrice.value && targetPrice.value > this.upperLimit || targetPrice.value < this.lowerLimit" 
+                class="error-text">Target Price should be within one percent of the askPrice/bidPrice
+            </span>
+        </mat-form-field>
+
+    </div>
+</div>
+<div mat-dialog-actions class="tf-dialog-actions">
+    <button class="tf-button" style="background-color: #046223;" mat-raised-button color="primary"
+        (click)="executeTrade(order)" [mat-dialog-close]="true"
+        [disabled]="(targetPrice.value && targetPrice.value > this.upperLimit || targetPrice.value < this.lowerLimit)
+    || (quantity.value && quantity.value > this.instrument.maxQuantity || quantity.value < this.instrument.minQuantity)">
+        Submit
+    </button>
+    <button class="tf-button" mat-raised-button mat-dialog-close>
+        Cancel
+    </button>
+</div>

@@ -1,0 +1,41 @@
+<h2>Welcome to the <br>{{banner}}</h2>
+<h4>Version: {{version}}</h4>
+<div id="queries" style="background-color: lightgrey; padding:2% 0 2% 0; border:2px solid green">
+    <header><h3>Queries</h3></header>
+    <a href="/fmts/trades/prices">Query for all prices</a><br>
+    <a href="/fmts/trades/prices/GOVT">Query for all GOVT prices</a><br>
+    <a href="/fmts/trades/instruments">Query for all instruments</a><br>
+    <a href="/fmts/trades/instruments/STOCK">Query for all STOCK instruments</a><br>
+</div>
+<br>
+<div id="commands" style="background-color:lightblue; padding:2% 0 2% 0; border:2px solid green">
+    <header><h3>Commands</h3></header>
+    <table style="background-color:lightblue; padding:2% 0 2% 0; border:1px solid black">
+        <thead>
+            <tr>
+                <th>Command</th>
+                <th>HTTP Method</th>
+                <th>Url</th>
+                <th>Body</th>
+                <th>Response</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid black">Client verification</td>
+                <td style="border: 1px solid black">POST</td>
+                <td style="border: 1px solid black">/fmts/client</td>
+                <td style="border: 1px solid black">Client data</td>
+                <td style="border: 1px solid black">Client data with clientId and token</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black">Trade execution</td>
+                <td style="border: 1px solid black">POST</td>
+                <td style="border: 1px solid black">/fmts/trades/trade</td>
+                <td style="border: 1px solid black">Trade order with token</td>
+                <td style="border: 1px solid black">Trade</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

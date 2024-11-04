@@ -1,0 +1,132 @@
+<mat-toolbar class="mat-elevation-z8">
+
+    <a> <img src="../../../assets/logo.png" alt="Marsh logo" matTooltip="Marsh Logo" (click)="redirectToLandingPage()" /> </a>
+
+    <span class="spacer-left"></span>
+
+    <span class="nav-title">Trade Marshals</span>
+
+    <span class="spacer-right"></span>
+
+</mat-toolbar>
+
+<h1> Registration Form </h1>
+
+<div class="stepperForm">
+    <mat-card>
+        <mat-stepper #stepper linear>
+            <mat-step [stepControl]="signupForm"  [completed]="false" #step1>
+                <div class="step">
+                    <form [formGroup]="signupForm">
+                        <ng-template matStepLabel>Register Email</ng-template>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Email</mat-label>
+                            <input matInput placeholder="abc@xyz.com" type="email" formControlName="email" required>
+                        </mat-form-field>
+                        <br>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Password</mat-label>
+                            <input matInput type="password" minlength="8" formControlName="password" required>
+                        </mat-form-field>
+                        <div *ngIf="signupForm.get('password')?.errors" class="alert">
+                            <div *ngIf="signupForm.get('password')?.errors?.['passwordStrength']">
+                                *{{errorMessage}}
+                            </div>
+                            <div class="alert"
+                                *ngIf="signupForm.get('password')?.errors?.['minlength'] || !signupForm.get('password')?.dirty">
+                                *Password should be atleast 8 characters long
+                            </div>
+                        </div>
+                        <br>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Retype Password</mat-label>
+                            <input matInput type="password" formControlName="retypePassword" required>
+                        </mat-form-field>
+                        <div *ngIf="signupForm.errors?.['identityRevealed']" class="alert">
+                            *Passwords are not matching
+                        </div>
+
+                        <div class="register-button">
+                            <button class="first-button" [disabled]="!signupForm.valid" (click)="validateNewEmail(stepper)" mat-raised-button> Next </button>
+                        </div>
+                    </form>
+                </div>
+            </mat-step>
+            <mat-step [stepControl]="personalDetails"  [completed]="false" #step2>
+                <div class="step">
+                    <form [formGroup]="personalDetails">
+                        <ng-template matStepLabel>Personal Details</ng-template>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Name</mat-label>
+                            <input matInput placeholder="Name" type="text" formControlName="name" required>
+                        </mat-form-field>
+                        <br>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Date of Birth</mat-label>
+                            <input matInput [matDatepicker]="picker" [max]="today" formControlName="doB">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                        <br>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Country</mat-label>
+                            <mat-select formControlName="country">
+                                <mat-option *ngFor="let country of countries" [value]="country.value">
+                                    {{country.name}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <br>
+
+                        <div class="register-button">
+                            <button mat-raised-button matStepperPrevious> Previous </button>
+                            <button [disabled]="!personalDetails.valid" (click)="setGovtIDType(stepper)" mat-raised-button > Next </button>
+                        </div>
+                    </form>
+                </div>
+            </mat-step>
+
+            <mat-step [stepControl]="identificationDetails"  [completed]="false" #step3>
+                <div class="step">
+                    <form [formGroup]="identificationDetails">
+                        <ng-template matStepLabel>Identification details</ng-template>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Govt ID Type</mat-label>
+                            <mat-select formControlName="type">
+                                <mat-option *ngFor="let idType of identificationTypes" [value]="idType.value">
+                                    {{idType.name}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <br>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Govt ID No.</mat-label>
+                            <input matInput placeholder="Enter Govt ID No" type="text" formControlName="value" required>
+                        </mat-form-field>
+                        <div *ngIf="identificationDetails.value!=='' && !identificationDetails.valid" class="alert">
+                            *Enter a valid Govt ID No.
+                        </div>
+                        <br>
+
+                        <div class="register-button">
+                            <button mat-raised-button matStepperPrevious> Previous </button>
+                            <button [disabled]="!identificationDetails.valid" (click)="submitRegistrationForm()" mat-raised-button > Submit </button>
+                        </div>
+                    </form>
+                </div>
+            </mat-step>
+        </mat-stepper>
+    </mat-card>
+</div>
+
+<footer class="footer">
+    <a>
+        <p> Contact Support <span><mat-icon mat-list-icon>contact_support</mat-icon></span> | Copyright &copy; MARSH</p>
+    </a>
+</footer>

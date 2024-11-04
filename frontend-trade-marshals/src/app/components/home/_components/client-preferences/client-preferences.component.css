@@ -1,0 +1,103 @@
+mat-form-field {
+    margin-bottom: 2%;
+    margin-right: 3%;
+    width: 100%;
+}
+
+.form {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 55%;
+}
+
+h2 {
+    text-align: center;
+}
+
+.horizontal-fields {
+    display: flex;
+    align-items: flex-start;
+}
+
+mat-slider {
+    margin-left: 3%;
+    width: 100%;
+}
+
+mat-label {
+    font-size: large;
+}
+
+.center-buttons button {
+    margin-right: 2%;
+    background-color: rgb(55, 97, 67);
+    color: white;
+}
+
+.center-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.slider {
+    margin-top: 2%;
+    display: flex;
+}
+
+::ng-deep .mdc-text-field:not(.mdc-text-field-disabled) .mdc-floating-label {
+    color: rgb(55, 97, 67) !important;
+}
+
+::ng-deep .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: rgb(55, 97, 67) !important;
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
+    border-bottom-color: rgb(55, 97, 67) !important;
+}
+
+::ng-deep .mdc-text-field--filled .mdc-line-ripple::after {
+    border-bottom-color: rgb(55, 97, 67) !important;
+}
+
+::ng-deep .mat-step-header .mat-step-icon-selected {
+    background-color: rgb(55, 97, 67);
+}
+
+::ng-deep .mat-step-header .mat-step-icon-content {
+    background-color: rgb(55, 97, 67);
+}
+
+::ng-deep .mat-step-header .mat-step-icon-state-edit {
+    background-color: rgb(55, 97, 67);
+}
+
+::ng-deep .mat-step-header .mat-step-icon-state-number {
+    background-color: rgb(55, 97, 67);
+}
+
+.mat-mdc-slider.mat-slider-green{
+    --mdc-slider-handle-color: #00c510;
+    --mdc-slider-focus-handler-color: #019b0e;
+    --mdc-slider-active-track-color: #019b0e;
+    --mdc-slider-inactive-track-color: #019b0e;
+    --mdc-slider-with-tick-marks-active-container-color: #ffffff;
+    --mdc-slider-with-tick-marks-inactive-container-color: #019b0e;
+    /* --mat-mdc-slider-hover-ripple-color: #88da8f; */
+    --mat-mdc-slider-focus-ripple-color: #88da8f;
+    width: 100%;
+}
+
+/* .mat-mdc-slider.mat-slider-green{
+    --mdc-slider-label-container-color: #e00025;
+    --mdc-slider-label-text-color: #fff;
+    --mat-mdc-slider-value-indicator-opacity: 0.61;
+} */

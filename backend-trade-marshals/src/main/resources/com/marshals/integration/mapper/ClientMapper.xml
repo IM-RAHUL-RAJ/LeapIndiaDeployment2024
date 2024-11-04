@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.marshals.integration.mapper.ClientMapper">
+	
+	<!--For verifying client's email-->
+	<select id="verifyClientEmail" resultType="String">
+		SELECT email
+		FROM client 
+		WHERE email= #{email}
+	</select>
+	
+	<!--For Client Login-->
+	
+	<!--For retrieving client identification details--> 
+	<resultMap id="ClientIdentificationMap" type="ClientIdentification">
+		<result property="type" column="TYPE" />
+		<result property="value" column="VALUE" />
+	</resultMap>
+	
+	<resultMap id="ClientMap" type="Client">
+		<id property="clientId" column="CLIENT_ID"/>
+		<result property="email" column="EMAIL" />
+		<result property="password" column="PASSWORD" />
+		<result property="name" column="NAME" />
+		<result property="dateOfBirth" column="DATE_OF_BIRTH" />
+		<result property="country" column="COUNTRY" />
+		<result property="isAdmin" column="IS_ADMIN" />
+		<collection property="identification" resultMap="ClientIdentificationMap" />
+	</resultMap>
+	<select id="getClientAtLogin" resultMap="ClientMap">
+		SELECT c.client_id, c.email, c.password, c.name, c.date_of_birth, c.country, c.is_admin, ci.type, ci.value
+		FROM client c
+		INNER JOIN client_identification ci
+		ON c.client_id = ci.client_id
+		WHERE c.email = #{email}
+		ORDER BY c.client_id
+	</select>
+	
+	<!--For Client Registration-->
+	
+	<!--For getting all client ID details (of all clients) - for verification -->
+	<select id="getAllClientIdentificationDetails" resultMap="ClientIdentificationMap">
+		SELECT type, value
+		FROM client_identification 
+		ORDER BY client_id
+	</select>
+	
+	<!--Saving new client details-->
+	<insert id="addNewClient">
+		INSERT INTO client (client_id, email, password, name, date_of_birth, country, is_admin, curr_balance) 
+		VALUES 
+        (
+            #{client.clientId},
+            #{client.email},
+            #{client.password},
+			#{client.name},
+			#{client.dateOfBirth},
+			#{client.country},
+			#{client.isAdmin},
+			#{clientPortfolio.currBalance}
+        )
+	</insert>
+	<!--Saving new client identification details-->
+	<insert id="addNewClientIdentificationDetails">
+		INSERT INTO client_identification (client_id, type, value) 
+		VALUES (
+			#{clientId},
+			#{identification.type},
+			#{identification.value}
+		)
+	</insert>
+
+</mapper>

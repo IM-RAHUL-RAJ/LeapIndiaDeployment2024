@@ -1,0 +1,88 @@
+
+
+.row {
+    display: flex;
+}
+
+mat-form-field {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 100%;
+}
+
+::ng-deep .mdc-text-field:not(.mdc-text-field-disabled) .mdc-floating-label {
+    color: rgb(55, 97, 67) !important;
+}
+::ng-deep .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: rgb(55, 97, 67) !important;
+}
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
+    border-bottom-color: rgb(55, 97, 67) !important;
+}
+::ng-deep .mdc-text-field--filled .mdc-line-ripple::after {
+    border-bottom-color: rgb(55, 97, 67) !important;
+}  
+
+mat-card-header.login-form-header {
+    display: flex; justify-content: center;
+    align-items: center;
+    background-color: rgb(55, 97, 67);
+    color:white;
+    position: relative;
+    padding:20px;
+    margin:0;
+}
+
+mat-card-title.login-form-title {
+   font-weight: bold;
+   font-size:30px;
+   flex-grow: 1;
+   text-align: center;
+}
+
+mat-card-header.login-form-header mat-icon {
+    position:absolute;
+    top:35%; right:5%;
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+mat-card-header.login-form-header mat-icon:hover {
+    opacity: 50%;
+}
+
+mat-label, mat-input {
+    font-size: large;
+}
+
+mat-input {
+    max-height: 50px;
+}
+
+mat-form-field {
+    margin: 4px 8px;
+}
+
+.tf-button {
+    padding: 5px 18px;
+    font-size: medium;
+    margin: 0px 15px 15px 15px;
+}
+
+.error-text {
+    color: red;
+    font-size: small;
+}
+
+.tf-dialog-title, .tf-dialog-content, .tf-dialog-actions {
+    margin: 4px 10px;
+}
+
+.tf-dialog-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+

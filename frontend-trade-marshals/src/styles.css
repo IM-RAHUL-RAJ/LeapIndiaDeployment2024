@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family:Cambria;
+}
+
+button:hover, .mat-button:hover, .mat-raised-button:hover, .mat-icon-button:hover {
+    opacity: 50%;
+}
+
+button:disabled, .mat-button:disabled, .mat-raised-button:disabled, .mat-icon-button:disabled {
+    opacity: 50%;
+    cursor: not-allowed !important;
+    pointer-events: all !important;
+}
+
+/*Styling Matform Field*/
+::ng-deep .mdc-text-field:not(.mdc-text-field-disabled) .mdc-floating-label {
+    color: rgb(55, 97, 67) !important;
+}
+::ng-deep .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: rgb(55, 97, 67) !important;
+}
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
+    border-bottom-color: rgb(55, 97, 67) !important;
+}
+::ng-deep .mdc-text-field--filled .mdc-line-ripple::after {
+    border-bottom-color: rgb(55, 97, 67) !important;
+}
+
+/*Styling MatSnackBar */
+.form-submit-snackbar {  
+    --mdc-snackbar-container-color:  rgb(55, 97, 67) !important;
+    --mdc-snackbar-supporting-text-color:white !important;
+    text-align:center !important;
+    --mdc-snackbar-supporting-text {
+        font-size:30px !important;
+        font-weight: bold !important;
+    }
+} 
+
+.red-snackbar {  
+    --mdc-snackbar-container-color: rgb(221, 62, 62) !important;
+    --mdc-snackbar-supporting-text-color:white !important;
+    text-align:center !important;
+    --mdc-snackbar-supporting-text {
+        font-size:30px !important;
+        font-weight: bold !important;
+    }
+} 
+/* You can add global styles to this file, and also import other style files
+/* For AG Grid Alpine theme */
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-alpine.css';
+@import 'ag-grid-community/styles/ag-theme-balham.css';
+
+ag-grid-angular {
+    margin: 20px;
+    max-width: 90vw;
+}
+
+.grid-container {
+    height:90vh;
+    font-size: 15px;
+}
+
+.ag-header-viewport{
+    background-color: rgb(222, 223, 221);
+}
+
+.ag-side-bar {
+    background-color: rgb(222, 223, 221);   
+}
+
+.ag-header-cell-resize::after{
+    background-color: black;
+}

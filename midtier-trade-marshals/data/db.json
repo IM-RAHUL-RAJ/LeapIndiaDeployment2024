@@ -1,0 +1,127 @@
+{
+    "bikes-all": [
+        {
+            "id": 1,
+            "name": "Mamba Sport 12\" Balance Bike",
+            "brand": "Mamba Bikes",
+            "color": "black",
+            "price": 75.88,
+            "imageUrl": "bike1.jpeg"
+          },
+          {
+            "id": 2,
+            "name": "DJ Fat Bike 500W",
+            "brand": "DJ Bikes",
+            "color": "grey",
+            "price": 1599.86,
+            "imageUrl": "bike2.jpeg"
+          },
+          {
+            "id": 3,
+            "name": "Kobe Aluminum Balance",
+            "brand": "Kobe",
+            "color": "blue",
+            "price": 88.56,
+            "imageUrl": "bike3.jpeg"
+          },
+          {
+            "id": 4,
+            "name": "Pomona Men's Cruiser Bike",
+            "brand": "Northwoods",
+            "color": "silver",
+            "price": 221.36,
+            "imageUrl": "bike4.jpeg"
+          }
+
+    ],
+    "bikes-team": [
+        {
+            "team": "BikeTeam",
+            "membersNames": ["Aditi", "Mayank", "Aparna"]
+        }
+    ],
+    "food-all": [
+        {
+            "id": 1,
+            "name": "The Original Sandwich",
+            "brand": "Oreo",
+            "weight": "303g",
+            "calories": 405,
+            "price": 2.85,
+            "imageUrl": "food1.jpeg"
+          },
+          {
+            "id": 2,
+            "name": "Peanut Butter",
+            "brand": "KRAFT",
+            "weight": "2000g",
+            "calories": 726,
+            "price": 9.39,
+            "imageUrl": "food2.jpeg"
+          },
+          {
+            "id": 3,
+            "name": "Beef Ravioli",
+            "brand": "Chef Boyardee",
+            "weight": "425g",
+            "calories": 250,
+            "price": 2.45,
+            "imageUrl": "food3.jpeg"
+          },
+          {
+            "id": 4,
+            "name": "Medium Cheddar Cheese",
+            "brand": "MOON CHEESE",
+            "weight": "57g",
+            "calories": 525,
+            "price": 5.87,
+            "imageUrl": "food4.jpeg"
+          }
+    ],
+    "food-team": [
+        {
+            "team": "FoodTeam",
+            "membersNames": ["Shamitha", "Aadhithyashri", "Yashaswini"]
+        }
+    ],
+    "toys-all":[
+        {
+            "id": 1,
+            "name": "Medical Kit",
+            "brand": "Fisher-Price",
+            "ageGroup": "3 to 9",
+            "price": 20.41,
+            "imageUrl": "toy1.jpeg"
+          },
+          {
+            "id": 2,
+            "name": "Ferry Boat",
+            "brand": "Green Toys",
+            "ageGroup": "3 to 6",
+            "price": 13.26,
+            "imageUrl": "toy2.jpeg"
+          },
+          {
+            "id": 3,
+            "name": "Rock-a-Stack",
+            "brand": "Fisher-Price",
+            "ageGroup": "1 to 5",
+            "price": 5.99,
+            "imageUrl": "toy3.jpeg"
+          },
+          {
+            "id": 4,
+            "name": "Stack Up Cups",
+            "brand": "The First Years",
+            "ageGroup": "0 to 3",
+            "price": 3.99,
+            "imageUrl": "toy4.jpeg"
+          }
+    ],
+    "toys-team":[
+        {
+            "team": "ToyTeam",
+            "membersNames": ["Chirag", "Prabhjot", "Krishna"]
+        }
+    ]
+}

@@ -1,0 +1,115 @@
+<mat-toolbar class="mat-elevation-z8">
+
+    <img src="../../../assets/logo.png" alt="Marsh logo" matTooltip="Marsh Logo" />
+
+    <span class="spacer-left"></span>
+
+    <span class="nav-title">Trade Marshals</span>
+
+    <span class="spacer-right"></span>
+
+    <button mat-button class='nav-button'><a href="#features">Features</a></button>
+    <button mat-button class='nav-button' (click)="openDialog('loginFormTemplate')">Login</button>
+
+</mat-toolbar>
+
+<article class="body-content mat-elevation-z4">
+
+    <section class="image-section">
+        <img src="../../../assets/background-image.svg" alt="Landing Page Background Image">
+    </section>
+    <section class="auth-section">
+        <h2> Let us help you secure your future! </h2>
+        <button mat-raised-button (click)="redirectToRegistration()">Sign Up</button>
+        <button mat-raised-button (click)="openDialog('loginFormTemplate')">Login</button>
+    </section>
+
+    <section class="features-section" id="features">
+        <h2> Why Choose our Trading Platform ? </h2>
+        <div class="features-grid">
+            <mat-card class="feature-card">
+                <mat-card-header>
+                    <mat-icon> integration_instructions </mat-icon>
+                    <mat-card-title> One Stop Solution </mat-card-title>
+                    <mat-card-subtitle> Our User Friendly platform meets all your trading requirements! </mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+            <mat-card class="feature-card">
+                <mat-card-header>
+                    <mat-icon> security </mat-icon>
+                    <mat-card-title> Your Data and Future is Secure </mat-card-title>
+                    <mat-card-subtitle> We validate our clients and store their data securely! </mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+            <mat-card class="feature-card">
+                <mat-card-header>
+                    <mat-icon> recommend </mat-icon>
+                    <mat-card-title> Personalized Recommendations </mat-card-title>
+                    <mat-card-subtitle> Leave it to our Robo Advisor to increase your profits! </mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+            <mat-card class="feature-card">
+                <mat-card-header>
+                    <mat-icon> bolt </mat-icon>
+                    <mat-card-title> Lightning Fast Trade Execution </mat-card-title>
+                    <mat-card-subtitle> Watch your portfolio transform drastically! </mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+            <mat-card class="feature-card">
+                <mat-card-header>
+                    <mat-icon> headset_mic </mat-icon>
+                    <mat-card-title> 24*7 Customer Support </mat-card-title>
+                    <mat-card-subtitle> Reach out to us anytime with your queries! </mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+            <mat-card class="feature-card">
+                <mat-card-header>
+                    <mat-icon> insights </mat-icon>
+                    <mat-card-title> Analytic Reports </mat-card-title>
+                    <mat-card-subtitle> Become an Admin and get more insights into our platform! </mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+        </div>
+    </section>
+
+</article>
+
+<footer class="footer">
+    <a>
+        <p> Contact Support <span><mat-icon mat-list-icon>contact_support</mat-icon></span> | Copyright &copy; MARSH</p>
+    </a>
+</footer>
+
+<ng-template #loginFormTemplate>
+    <mat-card style="height:100%; overflow: hidden;">
+        <mat-card-header class="login-form-header">
+            <mat-card-title class="login-form-title">
+                Welcome
+            </mat-card-title>
+            <mat-icon (click)="closeDialog(); loginCredentials.reset()"> close </mat-icon>
+        </mat-card-header>
+
+        <mat-card-content style="height:90%; overflow-y: auto;">
+            <form [formGroup]="loginCredentials" (ngSubmit)="onSubmitLoginForm()" class="login-form">
+                <div class="form-section">
+                    <h2>Enter your Login Credentials</h2>
+                    <mat-form-field>
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Enter Email ID" formControlName="email" type="text" required />
+                        <mat-error #error *ngIf="loginCredentials.get('email')?.hasError('required')">
+                            Email is Mandatory
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Enter Password" formControlName="password" type="password" required />
+                        <mat-error #error *ngIf="loginCredentials.get('password')?.hasError('required')">
+                            Password is Mandatory
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <button type="submit" mat-raised-button [disabled]="!loginCredentials.valid"> Login </button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</ng-template>

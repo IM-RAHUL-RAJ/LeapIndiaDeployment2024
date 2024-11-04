@@ -1,0 +1,576 @@
+{
+  "clients": [
+    {
+      "id": "57af",
+      "email": "sowmya@gmail.com",
+      "clientId": "1654658069",
+      "password": "Marsh2024",
+      "name": "Sowmya",
+      "dateOfBirth": "08/12/2002",
+      "country": "India",
+      "identification": [
+        {
+          "type": "Aadhar",
+          "value": "123456789102"
+        }
+      ],
+      "isAdmin": true
+    },
+    {
+      "id": "89b3",
+      "email": "himanshu@gmail.com",
+      "clientId": "541107416",
+      "password": "Marsh2024",
+      "name": "Himanshu",
+      "dateOfBirth": "08/12/2002",
+      "country": "India",
+      "identification": [
+        {
+          "type": "Aadhar",
+          "value": "123456789102"
+        }
+      ],
+      "isAdmin": true
+    },
+    {
+      "id": "a4d4",
+      "email": "rishiyanth@gmail.com",
+      "clientId": "1425922638",
+      "password": "Marsh2024",
+      "name": "Rishiyanth",
+      "dateOfBirth": "08/12/2002",
+      "country": "India",
+      "identification": [
+        {
+          "type": "Aadhar",
+          "value": "123456789102"
+        }
+      ],
+      "isAdmin": true
+    },
+    {
+      "id": "7a38",
+      "email": "aditi@gmail.com",
+      "clientId": "1644724236",
+      "password": "Marsh2024",
+      "name": "Aditi",
+      "dateOfBirth": "08/12/2002",
+      "country": "India",
+      "identification": [
+        {
+          "type": "Aadhar",
+          "value": "123456789102"
+        }
+      ],
+      "isAdmin": true
+    },
+    {
+      "id": "bc32",
+      "email": "mohith@gmail.com",
+      "clientId": "1236679496",
+      "password": "Marsh2024",
+      "name": "Mohith",
+      "dateOfBirth": "08/12/2002",
+      "country": "India",
+      "identification": [
+        {
+          "type": "Aadhar",
+          "value": "123456789102"
+        }
+      ],
+      "isAdmin": true
+    },
+    {
+      "id": "4532",
+      "email": "john.doe@gmail.com",
+      "clientId": "739982664",
+      "password": "Marsh2024",
+      "name": "John Doe",
+      "dateOfBirth": "06/12/2002",
+      "country": "USA",
+      "identification": [
+        {
+          "type": "SSN",
+          "value": "1234573532"
+        }
+      ],
+      "isAdmin": false
+    }
+  ],
+  "clients-portfolio": [
+    {
+      "id": "aabd",
+      "clientId": "1654658069",
+      "currBalance": 1000000,
+      "holdings": []
+    },
+    {
+      "id": "e747",
+      "clientId": "541107416",
+      "currBalance": 993020.98,
+      "holdings": [
+        {
+          "categoryId": "STOCK",
+          "instrumentId": "Q123",
+          "instrumentDesc": "Alphabet Inc. Class C Capital Stock",
+          "quantity": 6,
+          "avgPrice": 452.064375
+        }
+      ]
+    },
+    {
+      "id": "f4ad",
+      "clientId": "1425922638",
+      "currBalance": 1000000,
+      "holdings": []
+    },
+    {
+      "id": "602c",
+      "clientId": "1644724236",
+      "currBalance": 1000000,
+      "holdings": []
+    },
+    {
+      "id": "d986",
+      "clientId": "1236679496",
+      "currBalance": 1000000,
+      "holdings": []
+    },
+    {
+      "id": "10f4",
+      "clientId": "739982664",
+      "currBalance": 997465.66,
+      "holdings": [
+        {
+          "categoryId": "STOCK",
+          "instrumentId": "N123456",
+          "instrumentDesc": "JPMorgan Chase & Co. Capital Stock",
+          "quantity": 2,
+          "avgPrice": 104.75
+        },
+        {
+          "categoryId": "STOCK",
+          "instrumentId": "Q123",
+          "instrumentDesc": "Alphabet Inc. Class C Capital Stock",
+          "quantity": 2,
+          "avgPrice": 1162.42
+        }
+      ]
+    }
+  ],
+  "clients-preferences": [
+    {
+      "investmentPurpose": "Education",
+      "incomeCategory": "MIG",
+      "lengthOfInvestment": "Short",
+      "percentageOfSpend": "Tier1",
+      "riskTolerance": 5,
+      "acceptAdvisor": true,
+      "clientId": "1425922638",
+      "id": "dd54"
+    },
+    {
+      "investmentPurpose": "Education",
+      "incomeCategory": "HIG",
+      "lengthOfInvestment": "Short",
+      "percentageOfSpend": "Tier4",
+      "riskTolerance": 2,
+      "acceptAdvisor": false,
+      "clientId": "1654658069",
+      "id": "15b4"
+    },
+    {
+      "investmentPurpose": "Major Expense",
+      "incomeCategory": "LIG",
+      "lengthOfInvestment": "Medium",
+      "percentageOfSpend": "Tier2",
+      "riskTolerance": 2,
+      "acceptAdvisor": true,
+      "clientId": "541107416",
+      "id": "2c7d"
+    },
+    {
+      "id": "8be6",
+      "investmentPurpose": "Retirement",
+      "incomeCategory": "MIG",
+      "lengthOfInvestment": "Long",
+      "percentageOfSpend": "Tier3",
+      "riskTolerance": 3,
+      "acceptAdvisor": true,
+      "clientId": "1236679496"
+    },
+    {
+      "investmentPurpose": "Retirement",
+      "incomeCategory": "MIG",
+      "lengthOfInvestment": "Medium",
+      "percentageOfSpend": "Tier4",
+      "riskTolerance": 2,
+      "acceptAdvisor": true,
+      "id": "bb61",
+      "clientId": "1644724236"
+    },
+    {
+      "id": "46ba",
+      "investmentPurpose": "Retirement",
+      "incomeCategory": "LIG",
+      "lengthOfInvestment": "Short",
+      "percentageOfSpend": "Tier4",
+      "riskTolerance": 1,
+      "acceptAdvisor": true,
+      "clientId": "739982664"
+    },
+    {
+      "investmentPurpose": "Retirement",
+      "incomeCategory": "LIG",
+      "lengthOfInvestment": "Short",
+      "percentageOfSpend": "Tier4",
+      "riskTolerance": 1,
+      "acceptAdvisor": true,
+      "id": "5665"
+    }
+  ],
+  "trades": [
+    {
+      "id": "94da",
+      "instrumentId": "N123456",
+      "quantity": 2,
+      "executionPrice": 104.75,
+      "direction": "B",
+      "clientId": "739982664",
+      "order": {
+        "instrumentId": "N123456",
+        "quantity": 2,
+        "targetPrice": 104.15,
+        "direction": "B",
+        "clientId": "739982664",
+        "token": 739859208
+      },
+      "tradeId": "26huc8cjhc2-tjnia8afpdo-zzhuhmv55l",
+      "cashValue": 211.595
+    },
+    {
+      "id": "e75d",
+      "instrumentId": "T67880",
+      "quantity": 100,
+      "executionPrice": 1.00375,
+      "direction": "B",
+      "clientId": "739982664",
+      "order": {
+        "instrumentId": "T67880",
+        "quantity": 100,
+        "targetPrice": 1.00375,
+        "direction": "B",
+        "clientId": "739982664",
+        "token": 739859208
+      },
+      "tradeId": "wxerpcd221s-7l1njl7y7rn-fv0ellqkiw",
+      "cashValue": 101.37874999999998
+    },
+    {
+      "id": "80b5",
+      "instrumentId": "T67880",
+      "quantity": 100,
+      "executionPrice": 1.00375,
+      "direction": "S",
+      "clientId": "739982664",
+      "order": {
+        "instrumentId": "T67880",
+        "quantity": 100,
+        "targetPrice": 1.00375,
+        "direction": "S",
+        "clientId": "739982664",
+        "token": 739859208
+      },
+      "tradeId": "p0fqt13l28l-qnu141hm01e-78ocvykxm46",
+      "cashValue": 101.37874999999998
+    },
+    {
+      "id": "26bc",
+      "instrumentId": "Q123",
+      "quantity": 2,
+      "executionPrice": 1162.42,
+      "direction": "B",
+      "clientId": "739982664",
+      "order": {
+        "instrumentId": "Q123",
+        "quantity": 2,
+        "targetPrice": 1161.42,
+        "direction": "B",
+        "clientId": "739982664",
+        "token": 739859208
+      },
+      "tradeId": "9x1n1uzobwp-2v5djga2zaq-pv92m6yu1ee",
+      "cashValue": 2348.0884
+    },
+    {
+      "id": "c61b",
+      "instrumentId": "Q456",
+      "quantity": 1,
+      "executionPrice": 323.39,
+      "direction": "B",
+      "clientId": "541107416",
+      "order": {
+        "instrumentId": "Q456",
+        "quantity": 1,
+        "targetPrice": 322.89,
+        "direction": "B",
+        "clientId": "541107416",
+        "token": 540983960
+      },
+      "tradeId": "1c2adu8qn31-wwcmt5v9lj-rxbrqt6b49m",
+      "cashValue": 326.6239
+    },
+    {
+      "id": "2a97",
+      "instrumentId": "Q456",
+      "quantity": 1,
+      "executionPrice": 323.39,
+      "direction": "B",
+      "clientId": "541107416",
+      "order": {
+        "instrumentId": "Q456",
+        "quantity": 1,
+        "targetPrice": 322.89,
+        "direction": "B",
+        "clientId": "541107416",
+        "token": 540983960
+      },
+      "tradeId": "bfysa4hy29-jj6t3e3mqlc-bfmbduuhuyb",
+      "cashValue": 326.6239
+    },
+    {
+      "id": "ee81",
+      "instrumentId": "Q456",
+      "quantity": 1,
+      "executionPrice": 322.89,
+      "direction": "S",
+      "clientId": "541107416",
+      "order": {
+        "instrumentId": "Q456",
+        "quantity": 1,
+        "targetPrice": 323.39,
+        "direction": "S",
+        "clientId": "541107416",
+        "token": 540983960
+      },
+      "tradeId": "xakhtqls9t-ydwnqokdd4m-053y36vpdof5",
+      "cashValue": 326.1189
+    },
+    {
+      "id": "0733",
+      "instrumentId": "Q456",
+      "quantity": 1,
+      "executionPrice": 322.89,
+      "direction": "S",
+      "clientId": "541107416",
+      "order": {
+        "instrumentId": "Q456",
+        "quantity": 1,
+        "targetPrice": 323.39,
+        "direction": "S",
+        "clientId": "541107416",
+        "token": 540983960
+      },
+      "tradeId": "cojcgyb9bk-9dp3n3lfpg6-0g28wf44pyhd",
+      "cashValue": 326.1189
+    },
+    {
+      "id": "953c",
+      "instrumentId": "Q456",
+      "quantity": 1,
+      "executionPrice": 323.39,
+      "direction": "B",
+      "clientId": "541107416",
+      "order": {
+        "instrumentId": "Q456",
+        "quantity": 1,
+        "targetPrice": 322.89,
+        "direction": "B",
+        "clientId": "541107416",
+        "token": 540983960
+      },
+      "tradeId": "vca1f26w38-y6fx2tqcefd-kbmakr936",
+      "cashValue": 326.6239
+    },
+    {
+      "id": "9e63",
+      "instrumentId": "Q456",
+      "quantity": 1,
+      "executionPrice": 322.89,
+      "direction": "S",
+      "clientId": "541107416",
+      "order": {
+        "instrumentId": "Q456",
+        "quantity": 1,
+        "targetPrice": 323.39,
+        "direction": "S",
+        "clientId": "541107416",
+        "token": 540983960
+      },
+      "tradeId": "tg5verquea-ynwrukqrc8b-9zi6rw0xtmq",
+      "cashValue": 326.1189
+    },
+    {
+      "id": "db74",
+      "instrumentId": "Q123",
+      "quantity": 3,
+      "executionPrice": 1162.42,
+      "direction": "B",
+      "clientId": "541107416",
+      "order": {
+        "instrumentId": "Q123",
+        "quantity": 3,
+        "targetPrice": 1161.42,
+        "direction": "B",
+        "clientId": "541107416",
+        "token": 540983960
+      },
+      "tradeId": "g9dzmpj8jyb-ox1nqprr4z-zs8l3ootix",
+      "cashValue": 3522.1326000000004
+    },
+    {
+      "id": "e567",
+      "instrumentId": "Q123",
+      "quantity": 1,
+      "executionPrice": 1161.42,
+      "direction": "S",
+      "clientId": "541107416",
+      "order": {
+        "instrumentId": "Q123",
+        "quantity": 1,
+        "targetPrice": 1162.42,
+        "direction": "S",
+        "clientId": "541107416",
+        "token": 540983960
+      },
+      "tradeId": "gxjittkadq-tsx1s5etvu9-e2d6qcvlh2g",
+      "cashValue": 1173.0342
+    },
+    {
+      "id": "41c4",
+      "instrumentId": "Q123",
+      "quantity": 1,
+      "executionPrice": 1161.42,
+      "direction": "S",
+      "clientId": "541107416",
+      "order": {
+        "instrumentId": "Q123",
+        "quantity": 1,
+        "targetPrice": 1162.42,
+        "direction": "S",
+        "clientId": "541107416",
+        "token": 540983960
+      },
+      "tradeId": "c3igdlhjt1o-1g3vt7rbliq-pxxg4n6d7mg",
+      "cashValue": 1173.0342
+    },
+    {
+      "id": "7e8c",
+      "instrumentId": "Q123",
+      "quantity": 1,
+      "executionPrice": 1162.42,
+      "direction": "B",
+      "clientId": "541107416",
+      "order": {
+        "instrumentId": "Q123",
+        "quantity": 1,
+        "targetPrice": 1161.42,
+        "direction": "B",
+        "clientId": "541107416",
+        "token": 540983960
+      },
+      "tradeId": "r6968dlgxia-qwetpjv10t9-dmqf563gjz9",
+      "cashValue": 1174.0442
+    },
+    {
+      "id": "a94b",
+      "instrumentId": "Q123",
+      "quantity": 1,
+      "executionPrice": 1161.42,
+      "direction": "S",
+      "clientId": "541107416",
+      "order": {
+        "instrumentId": "Q123",
+        "quantity": 1,
+        "targetPrice": 1162.42,
+        "direction": "S",
+        "clientId": "541107416",
+        "token": 540983960
+      },
+      "tradeId": "if12n4m7ut-j9n7045t6lo-88lz7ak3ol8",
+      "cashValue": 1173.0342
+    },
+    {
+      "id": "328f",
+      "instrumentId": "Q123",
+      "quantity": 1,
+      "executionPrice": 1162.42,
+      "direction": "B",
+      "clientId": "541107416",
+      "order": {
+        "instrumentId": "Q123",
+        "quantity": 1,
+        "targetPrice": 1161.42,
+        "direction": "B",
+        "clientId": "541107416",
+        "token": 540983960
+      },
+      "tradeId": "td27xpd8bri-km9tn5ddayh-7tyr8yqgc1p",
+      "cashValue": 1174.0442
+    },
+    {
+      "id": "3c7e",
+      "instrumentId": "Q123",
+      "quantity": 1,
+      "executionPrice": 1162.42,
+      "direction": "B",
+      "clientId": "541107416",
+      "order": {
+        "instrumentId": "Q123",
+        "quantity": 1,
+        "targetPrice": 1161.42,
+        "direction": "B",
+        "clientId": "541107416",
+        "token": 540983960
+      },
+      "tradeId": "19f64nwft1h-lmgtu67q63b-h3ti54vc3tn",
+      "cashValue": 1174.0442
+    },
+    {
+      "id": "4b2f",
+      "instrumentId": "Q123",
+      "quantity": 1,
+      "executionPrice": 1162.42,
+      "direction": "B",
+      "clientId": "541107416",
+      "order": {
+        "instrumentId": "Q123",
+        "quantity": 1,
+        "targetPrice": 1161.42,
+        "direction": "B",
+        "clientId": "541107416",
+        "token": 540983960
+      },
+      "tradeId": "rrs3fpmh9c-kbe8c3olbzs-1atlww99sul",
+      "cashValue": 1174.0442
+    },
+    {
+      "id": "43b1",
+      "instrumentId": "Q123",
+      "quantity": 2,
+      "executionPrice": 1162.42,
+      "direction": "B",
+      "clientId": "541107416",
+      "order": {
+        "instrumentId": "Q123",
+        "quantity": 2,
+        "targetPrice": 1161.42,
+        "direction": "B",
+        "clientId": "541107416",
+        "token": 540983960
+      },
+      "tradeId": "3jlb06enm48-uw9y7dw2d6d-0d9yk1tz592l",
+      "cashValue": 2348.0884
+    }
+  ]
+}

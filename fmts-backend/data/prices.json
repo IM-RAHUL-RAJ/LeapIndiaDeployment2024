@@ -1,0 +1,80 @@
+[
+    {
+        "instrumentId": "N123456",
+        "askPrice": 104.75,
+        "bidPrice": 104.25,
+        "priceTimestamp": "21-AUG-19 10.00.01.042000000 AM GMT"
+    },
+    {
+        "instrumentId": "N123789",
+        "askPrice": 312500,
+        "bidPrice": 312000,
+        "priceTimestamp": "21-AUG-19 05.00.00.040000000 AM -05:00"
+    },
+    {
+        "instrumentId": "C100",
+        "askPrice": 95.92,
+        "bidPrice": 95.42,
+        "priceTimestamp": "21-AUG-19 10.00.02.042000000 AM GMT"
+    },
+    {
+        "instrumentId": "T67890",
+        "askPrice": 1.03375,
+        "bidPrice": 1.03390625,
+        "priceTimestamp": "21-AUG-19 10.00.02.000000000 AM GMT"
+    },
+    {
+        "instrumentId": "T67894",
+        "askPrice": 0.998125,
+        "bidPrice": 0.99828125,
+        "priceTimestamp": "21-AUG-19 10.00.02.002000000 AM GMT"
+    },
+    {
+        "instrumentId": "T67895",
+        "askPrice": 1,
+        "bidPrice": 1.00015625,
+        "priceTimestamp": "21-AUG-19 10.00.02.002000000 AM GMT"
+    },
+    {
+        "instrumentId": "T67897",
+        "askPrice": 0.999375,
+        "bidPrice": 0.999375,
+        "priceTimestamp": "21-AUG-19 10.00.02.002000000 AM GMT"
+    },
+    {
+        "instrumentId": "T67899",
+        "askPrice": 0.999375,
+        "bidPrice": 0.999375,
+        "priceTimestamp": "21-AUG-19 10.00.02.002000000 AM GMT"
+    },
+    {
+        "instrumentId": "T67880",
+        "askPrice": 1.00375,
+        "bidPrice": 1.00375,
+        "priceTimestamp": "21-AUG-19 10.00.02.002000000 AM GMT"
+    },
+    {
+        "instrumentId": "T67883",
+        "askPrice": 1.0596875,
+        "bidPrice": 1.0596875,
+        "priceTimestamp": "21-AUG-19 10.00.02.002000000 AM GMT"
+    },
+    {
+        "instrumentId": "T67878",
+        "askPrice": 0.9853125,
+        "bidPrice": 0.98546875,
+        "priceTimestamp": "21-AUG-19 10.00.02.002000000 AM GMT"
+    },
+    {
+        "instrumentId": "Q123",
+        "askPrice": 1162.42,
+        "bidPrice": 1161.42,
+        "priceTimestamp": "21-AUG-19 06.52.20.350000000 PM AMERICA\/NEW_YORK"
+    },
+    {
+        "instrumentId": "Q456",
+        "askPrice": 323.39,
+        "bidPrice": 322.89,
+        "priceTimestamp": "21-AUG-19 06.52.20.356000000 PM AMERICA\/NEW_YORK"
+    }
+]

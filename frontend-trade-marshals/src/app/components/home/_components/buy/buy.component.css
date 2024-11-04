@@ -1,0 +1,19 @@
+button {
+    background-color: rgb(222, 223, 221);
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+    width: 100px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.ng-star-inserted{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
