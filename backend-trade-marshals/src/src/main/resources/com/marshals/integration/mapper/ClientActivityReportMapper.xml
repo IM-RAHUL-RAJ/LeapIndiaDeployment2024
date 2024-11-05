@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.marshals.integration.mapper.ClientActivityReportMapper">
+	<resultMap id="holdingMap" type="Holding">
+		<id property="instrumentId" column="instrument_id" />
+		<result property="quantity" column="quantity" />
+		<result property="avgPrice" column="avg_price" />
+	</resultMap>
+
+	<select id="getClientHoldings" resultMap="holdingMap">
+		SELECT
+			instrument_id,
+			quantity,
+			avg_price
+		FROM
+			holdings
+		WHERE
+			client_id = #{clientId}
+		ORDER BY
+			client_id
+	</select>
+
+
+</mapper>
